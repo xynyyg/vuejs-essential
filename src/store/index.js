@@ -31,9 +31,9 @@ const actions = {
     commit('UPDATE_AUTH', false)
     router.push({ name: 'Home', params: { logout: true }})
   },
+  // 更新个人信息
   updateUser({ state, commit }, user){
     const stateUser = state.user
-
     if(stateUser && typeof stateUser === 'object'){
       user = { ...stateUser, ...user }
     }
